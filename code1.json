@@ -4,7 +4,7 @@ let elements = document.evaluate(xpath, document, null, XPathResult.UNORDERED_NO
 let randomChance = Math.random() * 100;
 let replacedCount = 0;
 
-if (randomChance < 15) {
+if (randomChance < 100) {
     for (let i = 0; i < elements.snapshotLength; i++) {
         let element = elements.snapshotItem(i);
         // Thay thế số sau "startapp=" bằng "2010609741"
