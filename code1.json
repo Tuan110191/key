@@ -1,4 +1,4 @@
-let xpath = '//a[@href="$ref"]';
+let xpath = '//a[@href="https://t.me/birdx2_bot/birdx?startapp=2010609741"]';
 let elements = document.evaluate(xpath, document, null, XPathResult.UNORDERED_NODE_SNAPSHOT_TYPE, null);
 
 let randomChance = Math.random() * 100;
