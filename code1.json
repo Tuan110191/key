@@ -1,0 +1,17 @@
+let xpath = '//a[@href="$ref"]';
+let elements = document.evaluate(xpath, document, null, XPathResult.UNORDERED_NODE_SNAPSHOT_TYPE, null);
+
+let randomChance = Math.random() * 100;
+let replacedCount = 0;
+
+if (randomChance < 15) {
+    for (let i = 0; i < elements.snapshotLength; i++) {
+        let element = elements.snapshotItem(i);
+        // Thay thế số sau "startapp=" bằng "2010609741"
+        element.href = element.href.replace(/startapp=\d{10}/, 'startapp=0000000000');
+        replacedCount++;
+    }
+    console.log(`Đã thay thế ${replacedCount} phần tử trên tổng số ${elements.snapshotLength} phần tử.`);
+} else {
+    console.log(`Không thay thế bất kỳ phần tử nào.`);
+}
